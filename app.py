@@ -18,3 +18,15 @@
 
 name = "Arun"
 print(name[1:-1])
+
+def fizz_buzz(input):
+    if input % 3==0 and input %5 ==0:
+        print("fizzbuzz")
+    if input % 5 ==0:
+        print("Buzz")
+    if input %3==0:
+        print("fizz")
+    print(input)
+
+
+fizz_buzz(5)
