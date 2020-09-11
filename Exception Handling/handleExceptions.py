@@ -19,3 +19,11 @@ except ValueError:
     print("Not valid number")
 finally:     #this final clause is always executed.
     file.close()
+
+    
+try: 
+    with open("../app.py") as file:
+        print("File opened")
+    num=int(input("Enter number: "))
+except FileNotFoundError:
+     print("Not valid number")
