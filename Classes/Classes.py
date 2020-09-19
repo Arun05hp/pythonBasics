@@ -1,3 +1,5 @@
+# class vs instance attributes
+
 class Point:
     default_color = "red"           # This is a class level attributes that is shared accross all objects
     def __init__(self,x,y):    #constructor 
@@ -18,3 +20,24 @@ point.draw()
 another = Point(3,4)
 another.draw()
 print(another.default_color)
+
+
+# class vs instance methods
+
+
+
+class Point:         
+    def __init__(self,x,y):    
+        self.x = x                              
+        self.y = y       
+
+    @classmethod        #to make class method we need decorator
+    def zero(cls):                # class method
+        return cls(0,0)             #This is same as calling Point(0,0)
+
+    def draw(self):
+        print(f"Point ({self.x}, {self.y})")
+
+
+point = Point.zero()
+point.draw()
